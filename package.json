@@ -1,0 +1,37 @@
+{
+  "name": "commerce",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "site",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build --scope=next-commerce --include-dependencies --no-deps",
+    "dev": "turbo run dev",
+    "start": "turbo run start",
+    "types": "turbo run types",
+    "prettier-fix": "prettier --write ."
+  },
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1",
+    "turbo": "^1.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "turbo run lint"
+    }
+  },
+  "packageManager": "yarn@1.22.17",
+  "dependencies": {
+    "@headlessui/react": "^1.5.0",
+    "@heroicons/react": "^1.0.6",
+    "@tailwindcss/forms": "^0.5.0",
+    "@types/react-leaflet": "^2.8.2",
+    "axios": "^0.26.1",
+    "leaflet": "^1.7.1",
+    "react-google-autocomplete": "^2.6.1",
+    "react-leaflet": "^3.2.5"
+  }
+}
